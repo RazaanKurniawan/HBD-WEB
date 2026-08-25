@@ -132,7 +132,7 @@
     <header class="hero-section">
       <div class="hero-content">
         <div class="hero-sub-badge">our little journey 💌</div>
-        <h1 class="hero-title">selamat ulang tahun, nada.</h1>
+        <h1 class="hero-title">selamat ulang tahun, Nada Nazmi Nurlaila.</h1>
         <p class="hero-subtitle">setiap momen bareng kamu selalu jadi hal terindah ✨</p>
         
         <!-- Big Heartbeat Sync Card -->
@@ -197,6 +197,16 @@
       </div>
     </main>
 
+    <!-- Interactive Couple Quiz Section -->
+    <section class="couple-quiz-section">
+      <CoupleQuiz />
+    </section>
+
+    <!-- Interactive Memory Map Section (Peta Jejak Cerita Kita) -->
+    <section class="memory-map-section-wrap">
+      <MemoryMap />
+    </section>
+
     <!-- Interactive Tinder-style Date Planner Swiping Section -->
     <section class="date-planner-section">
       <MemorySwipe />
@@ -238,6 +248,8 @@ import LoveLetter from './components/LoveLetter.vue'
 import MemorySwipe from './components/MemorySwipe.vue'
 import FunnyReveal from './components/FunnyReveal.vue'
 import BirthdayCake from './components/BirthdayCake.vue'
+import CoupleQuiz from './components/CoupleQuiz.vue'
+import MemoryMap from './components/MemoryMap.vue'
 
 // Audio import
 import bgmFile from './assets/audio/Bazzi - Beautiful feat. Camila [Official Audio].mp3'

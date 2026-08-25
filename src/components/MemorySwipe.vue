@@ -5,7 +5,7 @@
         <span>✨</span>
         <span>Date Planner Interaktif</span>
       </div>
-      <h2 class="swipe-title">mau kencan kemana hari ini, cantikk?</h2>
+      <h2 class="swipe-title">kamu mau apa cantiikk?</h2>
       <p class="swipe-subtitle">
         geser kartu ke <strong>kanan (💖 Mau!)</strong> atau ke <strong>kiri (❌ Skip)</strong> yaa!
       </p>
@@ -90,10 +90,10 @@
         <div class="glass-card summary-card">
           <div class="washi-tape-summary"></div>
           <div class="summary-icon">🎉</div>
-          <h3 class="summary-title">yeayyy! rencana kencan kita siap!</h3>
+          <h3 class="summary-title">yeayyy! rencana kita siap!</h3>
           
           <div v-if="selectedDates.length > 0" class="selected-list-box">
-            <p class="summary-instruction">catet yaa, hari ini kita bakal:</p>
+            <p class="summary-instruction">catet yaa, hari ini kita bakal beli:</p>
             <ul class="selected-list">
               <li v-for="(choice, idx) in selectedDates" :key="idx" class="selected-item">
                 <span class="item-emoji">{{ choice.icon }}</span>
@@ -105,13 +105,13 @@
 
           <div v-else class="empty-selection-box">
             <p class="empty-text">
-              wahh semuanya kamu skip nihh? gapapa, nanti aku yang pilihin tempat paling spesial yaa! 🥰
+              wahh semuanya kamu skip nihh? gapapa, nanti aku yang pilihin yang paling enak yaa! 🥰
             </p>
           </div>
 
           <div class="closing-note">
             <p class="romantic-quote">
-              "siap-siap ya cantikk, nanti aku jemput! ❤️"
+              "siap-siap ya cantikk, nanti kita kulineran bareng! ❤️"
             </p>
             <span class="signature">— dari supir pribadi & kesayanganmu</span>
           </div>
@@ -134,51 +134,51 @@ import { selectedDates } from '../data/datePlannerState.js'
 const initialData = [
   {
     id: 1,
-    title: 'Mie Ayam (walau yang dulu udah tutup hehe)',
-    description: 'makan mie ayam favorit sambil cerita random kaya biasanyaa.',
-    tag: 'Kuliner Santai',
-    icon: '🍜',
-    image: 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=600&q=80'
+    title: 'Sushi',
+    description: 'makan sushi lezat bareng kamu sambil cerita-cerita seru.',
+    tag: 'Kuliner Jepang',
+    icon: '🍣',
+    image: 'https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=600&q=80'
   },
   {
     id: 2,
-    title: 'Dimsum Hangat & Chili Oil',
-    description: 'nge-dimsum bareng trus rebutan siomay terakhir!',
+    title: 'Dimsum',
+    description: 'nge-dimsum hangat sambil celup chili oil favorit!',
     tag: 'Makan Enak',
     icon: '🥟',
     image: 'https://images.unsplash.com/photo-1541696432-82c6da8ce7bf?auto=format&fit=crop&w=600&q=80'
   },
   {
     id: 3,
-    title: 'Nonton Bioskop & Beli Popcorn',
-    description: 'nonton film yang lagi hits sambil pegangan tangan sepanjang film.',
-    tag: 'Movie Time',
-    icon: '🎬',
-    image: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=600&q=80'
+    title: 'Chikuro',
+    description: 'jajan Chikuro renyah dengan keju molor yang lumer di mulut!',
+    tag: 'Camilan Gurih',
+    icon: '🧀',
+    image: 'https://images.unsplash.com/photo-1627042633706-0498b3c10a45?auto=format&fit=crop&w=600&q=80'
   },
   {
     id: 4,
-    title: 'Jalan-jalan Random & Hunting Foto',
-    description: 'muter-muter kota sore hari trus fotoin kamu yang selalu cantik.',
-    tag: 'Keliling Kota',
-    icon: '📸',
-    image: 'https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=600&q=80'
+    title: 'Steak',
+    description: 'makan steak lezat hotplate gurih bareng kesayangan.',
+    tag: 'Hotplate Lezat',
+    icon: '🥩',
+    image: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80'
   },
   {
     id: 5,
-    title: 'Es Krim & Sweet Treats Hunting',
-    description: 'nyari dessert manis biar hari ulang tahun kamu makin manis.',
-    tag: 'Sweet Dessert',
-    icon: '🍦',
-    image: 'https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?auto=format&fit=crop&w=600&q=80'
+    title: 'Roti O',
+    description: 'roti kopi hangat yang wangi menteganya selalu menggoda!',
+    tag: 'Aroma Wangi',
+    icon: '🍞',
+    image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80'
   },
   {
     id: 6,
-    title: 'Makan Malam Romantis (Dinner Date)',
-    description: 'dinner santai berdua ngerayain hari spesial kamu dengan tenang.',
-    tag: 'Romantic Night',
-    icon: '🕯️',
-    image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80'
+    title: 'Pilih Makanan di AEON Street Food (Terserah Kamu)',
+    description: 'keliling AEON Street Food dan pilih semua makanan yang kamu pengen!',
+    tag: 'Custom AEON',
+    icon: '🛍️',
+    image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80'
   }
 ]
 

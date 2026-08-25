@@ -12,6 +12,16 @@ dist
 dist-ssr
 *.local
 
+# Large Media Files
+*.mp4
+*.MP4
+*.mov
+*.MOV
+*.mkv
+*.avi
+*.HEIC
+*.heic
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

@@ -1280,33 +1280,37 @@ onUnmounted(() => {
   }
 
   .timeline-section {
-    padding: 20px 16px 80px 16px;
+    padding: 20px 12px 60px 12px;
+    overflow-x: hidden;
   }
 
   .timeline-line {
-    left: 24px;
+    left: 18px;
     transform: none;
   }
 
   .timeline-item {
-    margin-bottom: 60px;
+    margin-bottom: 50px;
     justify-content: flex-start !important;
-    padding-left: 56px;
+    padding-left: 38px;
+    box-sizing: border-box;
+    width: 100%;
   }
 
   .timeline-card-wrapper {
     width: 100%;
+    max-width: 100%;
     justify-content: flex-start !important;
   }
 
   .timeline-node {
-    left: 24px;
+    left: 18px;
     transform: translate(-50%, -50%);
   }
 
   .timeline-connector {
-    left: 24px !important;
-    width: 32px !important;
+    left: 18px !important;
+    width: 20px !important;
   }
 }
 </style>

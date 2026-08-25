@@ -101,12 +101,13 @@ const isEven = computed(() => {
 .polaroid-card {
   position: relative;
   background-color: var(--polaroid-bg, #ffffff);
-  /* Classic authentic Polaroid padding: equal top & sides, much thicker bottom border */
-  padding: 14px 14px 46px 14px;
-  border-radius: 4px;
+  /* Classic authentic Polaroid padding: equal top & sides, thicker bottom */
+  padding: 10px 10px 36px 10px;
+  border-radius: 6px;
   box-shadow: var(--polaroid-shadow, 0 12px 28px rgba(74, 64, 54, 0.12), 0 4px 10px rgba(74, 64, 54, 0.06));
   width: 100%;
-  max-width: 340px;
+  max-width: 290px;
+  box-sizing: border-box;
   margin: 0 auto;
   cursor: pointer;
   user-select: none;
@@ -116,7 +117,7 @@ const isEven = computed(() => {
 
   /* Scroll Reveal Initial State */
   opacity: 0;
-  transform: translateY(80px) scale(0.95);
+  transform: translateY(60px) scale(0.96);
   transition: 
     opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
     transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
@@ -125,15 +126,22 @@ const isEven = computed(() => {
   will-change: transform, opacity;
 }
 
+@media (min-width: 640px) {
+  .polaroid-card {
+    max-width: 340px;
+    padding: 14px 14px 46px 14px;
+  }
+}
+
 /* Scroll Reveal Visible State (Resting Tilt) */
 .polaroid-card.is-visible.tilt-left {
   opacity: 1;
-  transform: translateY(0) rotate(-2.5deg) scale(1);
+  transform: translateY(0) rotate(-2deg) scale(1);
 }
 
 .polaroid-card.is-visible.tilt-right {
   opacity: 1;
-  transform: translateY(0) rotate(2deg) scale(1);
+  transform: translateY(0) rotate(1.5deg) scale(1);
 }
 
 /* Hover Effect (Lifting & Straightening) */

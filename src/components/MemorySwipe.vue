@@ -130,6 +130,14 @@ import { ref, reactive } from 'vue'
 import confetti from 'canvas-confetti'
 import { selectedDates } from '../data/datePlannerState.js'
 
+// Import local food photos from MakananPick
+import sushiImg from '../assets/images/MakananPick/sushi.webp'
+import dimsumImg from '../assets/images/MakananPick/dimsum.jpeg'
+import chikuroImg from '../assets/images/MakananPick/chikuro.jpeg'
+import steakImg from '../assets/images/MakananPick/Steak.jpg'
+import rotiOImg from '../assets/images/MakananPick/RotiO.png'
+import aeonImg from '../assets/images/MakananPick/aeon.jpg'
+
 // Initial Date Ideas Data
 const initialData = [
   {
@@ -138,7 +146,7 @@ const initialData = [
     description: 'makan sushi lezat bareng kamu sambil cerita-cerita seru.',
     tag: 'Kuliner Jepang',
     icon: '🍣',
-    image: 'https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=600&q=80'
+    image: sushiImg
   },
   {
     id: 2,
@@ -146,7 +154,7 @@ const initialData = [
     description: 'nge-dimsum hangat sambil celup chili oil favorit!',
     tag: 'Makan Enak',
     icon: '🥟',
-    image: 'https://images.unsplash.com/photo-1541696432-82c6da8ce7bf?auto=format&fit=crop&w=600&q=80'
+    image: dimsumImg
   },
   {
     id: 3,
@@ -154,7 +162,7 @@ const initialData = [
     description: 'jajan Chikuro renyah dengan keju molor yang lumer di mulut!',
     tag: 'Camilan Gurih',
     icon: '🧀',
-    image: 'https://images.unsplash.com/photo-1627042633706-0498b3c10a45?auto=format&fit=crop&w=600&q=80'
+    image: chikuroImg
   },
   {
     id: 4,
@@ -162,7 +170,7 @@ const initialData = [
     description: 'makan steak lezat hotplate gurih bareng kesayangan.',
     tag: 'Hotplate Lezat',
     icon: '🥩',
-    image: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80'
+    image: steakImg
   },
   {
     id: 5,
@@ -170,7 +178,7 @@ const initialData = [
     description: 'roti kopi hangat yang wangi menteganya selalu menggoda!',
     tag: 'Aroma Wangi',
     icon: '🍞',
-    image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80'
+    image: rotiOImg
   },
   {
     id: 6,
@@ -178,7 +186,7 @@ const initialData = [
     description: 'keliling AEON Street Food dan pilih semua makanan yang kamu pengen!',
     tag: 'Custom AEON',
     icon: '🛍️',
-    image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80'
+    image: aeonImg
   }
 ]
 

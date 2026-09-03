@@ -5,7 +5,7 @@
         <span>🙈</span>
         <span>Secret Memory Alert</span>
       </div>
-      <h2 class="reveal-title">ada satu memori rahasia nih...</h2>
+      <h2 class="reveal-title">ada satu memori rahasia ni xixixi</h2>
       <p class="reveal-prompt">
         berani buka? <strong class="highlight-action">(tahan layarnya yaa) 👇</strong>
       </p>
@@ -38,7 +38,7 @@
         <!-- Frosted Glass Holding Prompt Overlay -->
         <div class="frost-overlay" :class="{ 'hidden-overlay': isHolding }">
           <div class="lock-pulse-icon">🔒</div>
-          <span class="frost-text">Tahan di sini untuk intip 🙈</span>
+          <span class="frost-text">Tahan di sini buat ngintip 🙈</span>
           <span class="frost-subtext">Lepas untuk menyembunyikan lagi</span>
         </div>
       </div>
@@ -46,7 +46,7 @@
       <!-- Handwritten Romantic/Playful Caption -->
       <div class="caption-area">
         <p class="caption-text">
-          gemes bgt sihh muke lu pas bocil wkwk, tetep sayang kokk ❤️
+          gemes bgt sihh muka kamu pas bocil wkwk, tetep sayang kokk ❤️
         </p>
         <span class="caption-date">bocil era 👶</span>
       </div>

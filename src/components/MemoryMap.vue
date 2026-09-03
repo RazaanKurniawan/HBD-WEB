@@ -8,7 +8,7 @@
       </div>
       <h2 class="map-main-title">peta jejak langkah & kenangan kita</h2>
       <p class="map-main-subtitle">
-        setiap sudut kota punya cerita manis tentang kita berdua. Klik pin di peta untuk membuka memorinya! ✨
+        setiap sudut kota punya cerita manis tentang kita berdua. Klik pin di peta buat buka memorinya! ✨
       </p>
     </div>
 
@@ -35,7 +35,7 @@
         <div class="map-status-info">
           <span class="status-badge">
             <span class="status-dot"></span>
-            {{ places.length }} Lokasi Terkunci di Hati
+            {{ places.length }} Lokasi yang uda pernah kita kunjungi!
           </span>
         </div>
       </div>

@@ -7,13 +7,13 @@ const routes = [
     path: '/',
     name: 'home',
     component: HomeView,
-    meta: { title: 'Home - Vue 3 App' }
+    meta: { title: 'Happy Birthday Nada! 🎂💖' }
   },
   {
     path: '/about',
     name: 'about',
     component: AboutView,
-    meta: { title: 'About - Vue 3 App' }
+    meta: { title: 'Cerita Kita - Happy Birthday Nada! 🎂💖' }
   }
 ]
 

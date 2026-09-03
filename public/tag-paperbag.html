@@ -1,0 +1,1583 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gift Tag Paper Bag QR Code (Ukuran KTP Terpisah) - Happy Birthday Nada! 🎂💖</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Courier+Prime:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Base Theme Variables - Default: Baby Blue */
+      --theme-bg-page: #EBF4FC;
+      --theme-primary: #2B6CB0;
+      --theme-secondary: #63B3ED;
+      --theme-accent: #0284C7;
+      --theme-card-bg: #F0F8FF;
+      --theme-card-border: #90CDF4;
+      --theme-text-main: #1E293B;
+      --theme-text-muted: #64748B;
+      --theme-hole: #2B6CB0;
+      --theme-tape: rgba(186, 230, 253, 0.9);
+      --theme-seal-1: #38BDF8;
+      --theme-seal-2: #0284C7;
+      
+      /* Exact Standard KTP / ATM Card Dimension: 85.6mm x 53.98mm */
+      --ktp-w: 54mm;
+      --ktp-h: 85.6mm;
+      --ktp-radius: 4mm;
+    }
+
+    /* THEME COLOR PRESETS */
+    body.theme-blue {
+      --theme-bg-page: #EBF4FC;
+      --theme-primary: #2B6CB0;
+      --theme-secondary: #63B3ED;
+      --theme-accent: #0284C7;
+      --theme-card-bg: #F0F8FF;
+      --theme-card-border: #90CDF4;
+      --theme-text-main: #1E293B;
+      --theme-text-muted: #64748B;
+      --theme-hole: #2B6CB0;
+      --theme-tape: rgba(186, 230, 253, 0.9);
+      --theme-seal-1: #38BDF8;
+      --theme-seal-2: #0284C7;
+    }
+
+    body.theme-terracotta {
+      --theme-bg-page: #F0EAE1;
+      --theme-primary: #E07A5F;
+      --theme-secondary: #D4A373;
+      --theme-accent: #F4A261;
+      --theme-card-bg: #FAF6F0;
+      --theme-card-border: #E2D7CB;
+      --theme-text-main: #4A4036;
+      --theme-text-muted: #8A7E72;
+      --theme-hole: #E07A5F;
+      --theme-tape: rgba(220, 207, 189, 0.85);
+      --theme-seal-1: #E07A5F;
+      --theme-seal-2: #C85A3D;
+    }
+
+    body.theme-pink {
+      --theme-bg-page: #FDE8EC;
+      --theme-primary: #E64980;
+      --theme-secondary: #F783AC;
+      --theme-accent: #D6336C;
+      --theme-card-bg: #FFF0F5;
+      --theme-card-border: #FCC2D7;
+      --theme-text-main: #491217;
+      --theme-text-muted: #862E3E;
+      --theme-hole: #E64980;
+      --theme-tape: rgba(252, 194, 215, 0.85);
+      --theme-seal-1: #F06595;
+      --theme-seal-2: #C2255C;
+    }
+
+    body.theme-sage {
+      --theme-bg-page: #EAF2EC;
+      --theme-primary: #2D6A4F;
+      --theme-secondary: #74C69D;
+      --theme-accent: #40916C;
+      --theme-card-bg: #F2F8F4;
+      --theme-card-border: #B7E4C7;
+      --theme-text-main: #1B4332;
+      --theme-text-muted: #52796F;
+      --theme-hole: #2D6A4F;
+      --theme-tape: rgba(183, 228, 199, 0.85);
+      --theme-seal-1: #52B788;
+      --theme-seal-2: #2D6A4F;
+    }
+
+    body.theme-lavender {
+      --theme-bg-page: #F3E8FF;
+      --theme-primary: #7C3AED;
+      --theme-secondary: #A78BFA;
+      --theme-accent: #6D28D9;
+      --theme-card-bg: #FAF5FF;
+      --theme-card-border: #DDD6FE;
+      --theme-text-main: #3B0764;
+      --theme-text-muted: #6B21A8;
+      --theme-hole: #7C3AED;
+      --theme-tape: rgba(221, 214, 254, 0.85);
+      --theme-seal-1: #8B5CF6;
+      --theme-seal-2: #5B21B6;
+    }
+
+    body.theme-mono {
+      --theme-bg-page: #F1F5F9;
+      --theme-primary: #1E293B;
+      --theme-secondary: #64748B;
+      --theme-accent: #334155;
+      --theme-card-bg: #FFFFFF;
+      --theme-card-border: #CBD5E1;
+      --theme-text-main: #0F172A;
+      --theme-text-muted: #64748B;
+      --theme-hole: #1E293B;
+      --theme-tape: rgba(203, 213, 225, 0.85);
+      --theme-seal-1: #475569;
+      --theme-seal-2: #0F172A;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--theme-bg-page);
+      color: var(--theme-text-main);
+      padding: 24px 16px 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      transition: background 0.3s ease;
+    }
+
+    /* Top Control Bar */
+    .action-header {
+      max-width: 980px;
+      width: 100%;
+      background: #FFFFFF;
+      border-radius: 16px;
+      padding: 20px 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .header-info h1 {
+      font-family: 'Caveat', cursive;
+      font-size: 2.2rem;
+      color: var(--theme-primary);
+      line-height: 1.1;
+      transition: color 0.3s ease;
+    }
+
+    .header-info p {
+      font-size: 0.88rem;
+      color: var(--theme-text-muted);
+      margin-top: 4px;
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 6px;
+    }
+
+    .badge-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+
+    .badge-ktp {
+      background: var(--theme-card-bg);
+      color: var(--theme-primary);
+      border: 1px solid var(--theme-card-border);
+    }
+
+    .badge-perm {
+      background: #E8F5E9;
+      color: #2E7D32;
+      border: 1px solid #A5D6A7;
+    }
+
+    .header-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      border: none;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-secondary) 100%);
+      color: #FFFFFF;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-secondary {
+      background: #F8FAFC;
+      color: var(--theme-text-main);
+      border: 1px solid rgba(0, 0, 0, 0.12);
+    }
+
+    .btn-secondary:hover {
+      background: #EDF2F7;
+    }
+
+    /* Selection Control Container */
+    .selector-container {
+      max-width: 980px;
+      width: 100%;
+      background: #FFFFFF;
+      border-radius: 16px;
+      padding: 20px 24px;
+      margin-bottom: 20px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    /* 1. Color Palette Selector */
+    .palette-section {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding-bottom: 16px;
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+    }
+
+    .section-label {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--theme-text-main);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .palette-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 10px;
+    }
+
+    .palette-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 10px;
+      border: 2px solid transparent;
+      background: #F8FAFC;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #334155;
+      transition: all 0.2s ease;
+    }
+
+    .palette-btn:hover {
+      background: #EDF2F7;
+      transform: translateY(-1px);
+    }
+
+    .palette-btn.active {
+      border-color: var(--theme-primary);
+      background: #FFFFFF;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      color: var(--theme-primary);
+    }
+
+    .color-swatch {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 2px solid #FFFFFF;
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
+      flex-shrink: 0;
+    }
+
+    /* 2. Design Selector */
+    .design-section {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .design-header-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .print-mode-toggle {
+      display: flex;
+      align-items: center;
+      background: #F1F5F9;
+      padding: 4px;
+      border-radius: 999px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      gap: 4px;
+    }
+
+    .mode-btn {
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      border: none;
+      background: transparent;
+      color: #64748B;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .mode-btn.active {
+      background: #FFFFFF;
+      color: var(--theme-primary);
+      font-weight: 700;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .design-tabs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 10px;
+    }
+
+    .design-tab-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      padding: 12px 6px;
+      background: #F8FAFC;
+      border: 2px solid transparent;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-align: center;
+    }
+
+    .design-tab-btn:hover {
+      background: #F1F5F9;
+    }
+
+    .design-tab-btn.active {
+      background: #FFFFFF;
+      border-color: var(--theme-primary);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .design-tab-btn.featured-ktp {
+      position: relative;
+      border: 2px solid var(--theme-secondary);
+    }
+
+    .featured-badge {
+      position: absolute;
+      top: -7px;
+      background: var(--theme-primary);
+      color: #FFFFFF;
+      font-size: 0.6rem;
+      font-weight: 800;
+      padding: 1px 7px;
+      border-radius: 999px;
+    }
+
+    .tab-icon {
+      font-size: 1.5rem;
+    }
+
+    .tab-name {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--theme-text-main);
+    }
+
+    /* Important Print Checklist Banner */
+    .print-tip-banner {
+      max-width: 980px;
+      width: 100%;
+      background: #EFF6FF;
+      border: 1.5px solid #93C5FD;
+      border-radius: 12px;
+      padding: 14px 20px;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.06);
+    }
+
+    .tip-icon {
+      font-size: 1.8rem;
+      flex-shrink: 0;
+    }
+
+    .tip-content {
+      font-size: 0.88rem;
+      color: #1E3A8A;
+      line-height: 1.45;
+    }
+
+    .tip-content strong {
+      color: #1D4ED8;
+    }
+
+    /* Print Canvas Sheet */
+    .print-sheet {
+      width: 100%;
+      max-width: 980px;
+      background: #FFFFFF;
+      padding: 36px 28px;
+      border-radius: 16px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .sheet-title {
+      text-align: center;
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px dashed rgba(0, 0, 0, 0.1);
+      width: 100%;
+    }
+
+    .sheet-title h2 {
+      font-family: 'Caveat', cursive;
+      font-size: 2.2rem;
+      color: var(--theme-primary);
+    }
+
+    .sheet-title p {
+      font-size: 0.85rem;
+      color: var(--theme-text-muted);
+    }
+
+    /* Container for Displayed Separated Cards */
+    .tags-display-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(54mm, 54mm));
+      gap: 20px 24px;
+      justify-content: center;
+      align-items: start;
+      width: 100%;
+    }
+
+    /* ================= EXACT KTP / ID-CARD DIMENSION BASE (STANDALONE SEPARATED) ================= */
+    .tag-ktp-base {
+      width: var(--ktp-w);
+      height: var(--ktp-h);
+      min-width: var(--ktp-w);
+      min-height: var(--ktp-h);
+      max-width: var(--ktp-w);
+      max-height: var(--ktp-h);
+      border-radius: var(--ktp-radius);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      text-align: center;
+      padding: 10px 8px 9px 8px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+      user-select: none;
+      overflow: hidden;
+      background: var(--theme-card-bg);
+      border: 1.2px solid var(--theme-card-border);
+      transition: all 0.3s ease;
+      margin: 0 auto;
+    }
+
+    /* Hole Punch Guide: Clean small dotted circle */
+    .hole-punch-guide {
+      width: 4.5mm;
+      height: 4.5mm;
+      border-radius: 50%;
+      border: 1.2px dashed var(--theme-hole);
+      background: #FFFFFF;
+      margin: 0 auto 3px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .hole-punch-guide::after {
+      content: '';
+      width: 1.5px;
+      height: 1.5px;
+      background: var(--theme-hole);
+      border-radius: 50%;
+    }
+
+    .qr-ktp-box {
+      background: #FFFFFF;
+      padding: 3.5px;
+      border-radius: 7px;
+      border: 1px solid var(--theme-card-border);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 1px 0;
+    }
+
+    .qr-ktp-img {
+      width: 30mm;
+      height: 30mm;
+      display: block;
+    }
+
+    /* ================= 1. THEME: KTP IDENTITAS CINTA (AUTHENTIC ID CARD) ================= */
+    .tag-ktp-front {
+      padding: 6px 7px 5px 7px;
+      justify-content: flex-start;
+      gap: 3px;
+      background: #FFFFFF;
+      border: 1.2px solid var(--theme-primary);
+    }
+
+    .ktp-header-box {
+      width: 100%;
+      border-bottom: 1.2px solid var(--theme-primary);
+      padding-bottom: 3px;
+      text-align: center;
+    }
+
+    .ktp-nation-title {
+      font-size: 0.52rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      color: var(--theme-primary);
+      text-transform: uppercase;
+      line-height: 1.1;
+    }
+
+    .ktp-card-title {
+      font-size: 0.62rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      color: var(--theme-text-main);
+      text-transform: uppercase;
+      line-height: 1.1;
+    }
+
+    .ktp-body-grid {
+      display: flex;
+      width: 100%;
+      gap: 5px;
+      margin-top: 3px;
+      text-align: left;
+    }
+
+    .ktp-photo-col {
+      width: 18mm;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      flex-shrink: 0;
+    }
+
+    .ktp-photo-frame {
+      width: 18mm;
+      height: 23mm;
+      border: 1px solid var(--theme-primary);
+      border-radius: 2px;
+      overflow: hidden;
+      background: #E2E8F0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .ktp-photo-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .ktp-stamp-badge {
+      font-size: 0.45rem;
+      font-weight: 800;
+      color: #2E7D32;
+      background: #E8F5E9;
+      border: 0.5px solid #A5D6A7;
+      padding: 1px 3px;
+      border-radius: 2px;
+      text-align: center;
+      width: 100%;
+      text-transform: uppercase;
+    }
+
+    .ktp-data-col {
+      flex: 1;
+      font-size: 0.48rem;
+      color: var(--theme-text-main);
+      display: flex;
+      flex-direction: column;
+      gap: 1.5px;
+      line-height: 1.15;
+    }
+
+    .ktp-nik {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.56rem;
+      font-weight: 700;
+      color: var(--theme-primary);
+      letter-spacing: 0.02em;
+    }
+
+    .ktp-data-row {
+      display: grid;
+      grid-template-columns: 14mm 1fr;
+      gap: 2px;
+    }
+
+    .ktp-label {
+      color: var(--theme-text-muted);
+      font-weight: 600;
+    }
+
+    .ktp-val {
+      font-weight: 700;
+      color: var(--theme-text-main);
+    }
+
+    .ktp-val.highlight-val {
+      color: var(--theme-primary);
+    }
+
+    .ktp-footer-sign {
+      margin-top: auto;
+      width: 100%;
+      border-top: 0.8px dashed var(--theme-card-border);
+      padding-top: 2px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      font-size: 0.46rem;
+    }
+
+    .ktp-sign-box {
+      text-align: right;
+    }
+
+    .ktp-sign-name {
+      font-family: 'Caveat', cursive;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--theme-primary);
+      line-height: 0.9;
+    }
+
+    /* KTP BACK */
+    .tag-ktp-back {
+      padding: 6px 7px 6px 7px;
+      background: var(--theme-card-bg);
+      border: 1.2px solid var(--theme-primary);
+    }
+
+    .ktp-back-chip-bar {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 3px;
+      border-bottom: 1px solid var(--theme-card-border);
+    }
+
+    .sim-chip-icon {
+      width: 7mm;
+      height: 5.5mm;
+      background: linear-gradient(135deg, #ECC94B 0%, #D69E2E 100%);
+      border-radius: 2px;
+      border: 0.8px solid #B7791F;
+    }
+
+    .ktp-back-terms {
+      font-size: 0.44rem;
+      color: var(--theme-text-muted);
+      text-align: left;
+      line-height: 1.25;
+      padding: 0 2px;
+    }
+
+    .ktp-back-terms strong {
+      color: var(--theme-text-main);
+    }
+
+    .ktp-scan-badge {
+      font-family: 'Caveat', cursive;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--theme-primary);
+      line-height: 1;
+    }
+
+    /* ================= 2. THEME: CLASSIC LUGGAGE ================= */
+    .tag-classic {
+      border: 1.2px dashed var(--theme-primary);
+      clip-path: polygon(
+        7mm 0%, 
+        calc(100% - 7mm) 0%, 
+        100% 9mm, 
+        100% 100%, 
+        0% 100%, 
+        0% 9mm
+      );
+    }
+
+    .tag-classic .tag-header {
+      font-family: 'Caveat', cursive;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--theme-primary);
+      line-height: 1.05;
+    }
+
+    .tag-classic .tag-sub {
+      font-size: 0.65rem;
+      color: var(--theme-text-muted);
+      margin-top: 2px;
+    }
+
+    .tag-classic .tag-scan-text {
+      font-family: 'Caveat', cursive;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--theme-text-main);
+      line-height: 1;
+    }
+
+    .tag-classic .tag-author {
+      font-size: 0.62rem;
+      color: var(--theme-primary);
+      font-weight: 600;
+    }
+
+    /* ================= 3. THEME: POLAROID SCRAPBOOK ================= */
+    .tag-polaroid {
+      background: #FFFFFF;
+      border: 1.2px solid var(--theme-card-border);
+      padding: 12px 8px 8px 8px;
+    }
+
+    .washi-tape-accent {
+      position: absolute;
+      top: -5px;
+      left: 50%;
+      transform: translateX(-50%) rotate(-1deg);
+      width: 16mm;
+      height: 4mm;
+      background: var(--theme-tape);
+      border-left: 1.5px dashed rgba(255, 255, 255, 0.6);
+      border-right: 1.5px dashed rgba(255, 255, 255, 0.6);
+    }
+
+    .tag-polaroid .polaroid-badge {
+      display: inline-block;
+      padding: 2px 7px;
+      background: var(--theme-card-bg);
+      border-radius: 999px;
+      font-size: 0.58rem;
+      font-weight: 700;
+      color: var(--theme-primary);
+      border: 1px dashed var(--theme-card-border);
+      margin-bottom: 2px;
+    }
+
+    .tag-polaroid .polaroid-title {
+      font-family: 'Caveat', cursive;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--theme-text-main);
+      line-height: 1;
+    }
+
+    .tag-polaroid .polaroid-quote {
+      font-family: 'Caveat', cursive;
+      font-size: 1.05rem;
+      color: var(--theme-primary);
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    /* ================= 4. THEME: ELEGANT ARCH ================= */
+    .tag-arch {
+      background: #FFFFFF;
+      border: 1.2px solid var(--theme-primary);
+      border-radius: 27mm 27mm 4mm 4mm;
+      padding: 10px 8px 8px 8px;
+    }
+
+    .tag-arch .arch-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--theme-text-main);
+      letter-spacing: 0.02em;
+      line-height: 1.1;
+    }
+
+    .tag-arch .arch-sub {
+      font-size: 0.6rem;
+      color: var(--theme-primary);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-top: 1px;
+    }
+
+    .tag-arch .arch-footer {
+      font-family: 'Caveat', cursive;
+      font-size: 1rem;
+      color: var(--theme-primary);
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    /* ================= 5. THEME: ROMANTIC PASTEL ================= */
+    .tag-romantic {
+      background: linear-gradient(180deg, var(--theme-card-bg) 0%, #FFFFFF 100%);
+      border: 1.2px solid var(--theme-primary);
+    }
+
+    .tag-romantic .romantic-icon {
+      font-size: 1.1rem;
+      line-height: 1;
+      margin-bottom: 2px;
+    }
+
+    .tag-romantic .romantic-title {
+      font-family: 'Caveat', cursive;
+      font-size: 1.22rem;
+      font-weight: 700;
+      color: var(--theme-primary);
+      line-height: 1;
+    }
+
+    .tag-romantic .romantic-for {
+      font-size: 0.6rem;
+      color: var(--theme-text-main);
+      font-weight: 600;
+      margin-top: 1px;
+    }
+
+    .tag-romantic .romantic-prompt {
+      font-family: 'Caveat', cursive;
+      font-size: 0.98rem;
+      color: var(--theme-text-main);
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    /* ================= 6. THEME: BENTO CAKE ================= */
+    .tag-bento {
+      background: #FFFFFF;
+      border: 1.2px dashed var(--theme-primary);
+    }
+
+    .tag-bento .bento-badge {
+      font-size: 0.58rem;
+      font-weight: 800;
+      background: var(--theme-card-bg);
+      color: var(--theme-primary);
+      border: 1px solid var(--theme-card-border);
+      padding: 2px 7px;
+      border-radius: 999px;
+      margin-bottom: 2px;
+      display: inline-block;
+    }
+
+    .tag-bento .bento-title {
+      font-family: 'Caveat', cursive;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--theme-primary);
+      line-height: 1;
+    }
+
+    .tag-bento .bento-scan {
+      font-family: 'Caveat', cursive;
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--theme-text-main);
+      line-height: 1;
+    }
+
+    /* ================= 7. THEME: WAX SEAL ================= */
+    .tag-waxseal {
+      background: var(--theme-card-bg);
+      border: 1.2px solid var(--theme-card-border);
+    }
+
+    .faux-seal {
+      width: 7mm;
+      height: 7mm;
+      background: radial-gradient(circle, var(--theme-seal-1) 0%, var(--theme-seal-2) 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      margin-bottom: 2px;
+    }
+
+    .tag-waxseal .wax-title {
+      font-family: 'Caveat', cursive;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--theme-text-main);
+      line-height: 1;
+    }
+
+    .tag-waxseal .wax-sub {
+      font-size: 0.6rem;
+      color: var(--theme-text-muted);
+      margin-top: 1px;
+    }
+
+    .tag-waxseal .wax-footer {
+      font-family: 'Caveat', cursive;
+      font-size: 0.98rem;
+      color: var(--theme-primary);
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    /* ================= PRINT MEDIA QUERY: EXACT A4 KTP SIZING (SEPARATED CARDS) ================= */
+    @page {
+      size: A4 portrait;
+      margin: 10mm 15mm;
+    }
+
+    @media print {
+      body {
+        background: #FFFFFF !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+
+      .action-header, .selector-container, .print-tip-banner {
+        display: none !important;
+      }
+
+      .print-sheet {
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+      }
+
+      .sheet-title {
+        display: none !important;
+      }
+
+      .tags-display-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 54mm) !important;
+        grid-gap: 8mm 24mm !important;
+        justify-content: center !important;
+        align-content: start !important;
+        width: 100% !important;
+        margin: 0 auto !important;
+        padding-top: 2mm !important;
+      }
+
+      .tag-ktp-base {
+        box-shadow: none !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        page-break-inside: avoid !important;
+      }
+    }
+  </style>
+</head>
+<body class="theme-blue">
+
+  <!-- Top Action Header -->
+  <div class="action-header">
+    <div class="header-info">
+      <h1>🏷️ Paperbag Gift Tag QR Code (Kartu KTP Terpisah)</h1>
+      <p>Setiap kartu terpisah rapi dengan 4 sudut rounded untuk kemudahan gunting dan tempel ✨</p>
+      <div class="badge-row">
+        <span class="badge-chip badge-ktp">
+          <span>📏</span>
+          <span>Ukuran KTP: 54 × 85.6 mm</span>
+        </span>
+        <span class="badge-chip badge-perm">
+          <span>🔒</span>
+          <span>QR Code Permanen (Static)</span>
+        </span>
+      </div>
+    </div>
+    <div class="header-buttons">
+      <button onclick="window.print()" class="btn btn-primary">
+        <span>🖨️ Cetak / Print Sekarang</span>
+      </button>
+      <a id="btn-dl-png" href="/qrcode-blue.png" download="qrcode-biru.png" class="btn btn-secondary">
+        <span>📥 Download PNG</span>
+      </a>
+      <a id="btn-dl-svg" href="/qrcode-blue.svg" download="qrcode-biru.svg" class="btn btn-secondary">
+        <span>📥 Download SVG</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Important Print Checklist Banner -->
+  <div class="print-tip-banner">
+    <div class="tip-icon">🖨️</div>
+    <div class="tip-content">
+      <strong>PENTING SAAT CETAK:</strong> Pada menu print browser (Chrome/Edge), pastikan centang opsi <strong>"Background graphics" (Grafik latar belakang)</strong> agar warna biru muda dan background tercetak sempurna!
+    </div>
+  </div>
+
+  <!-- Interactive Controls -->
+  <div class="selector-container">
+    
+    <!-- 1. Color Palette Selector -->
+    <div class="palette-section">
+      <span class="section-label">🎨 1. Pilih Tema Warna Kartu:</span>
+      <div class="palette-grid">
+        <button class="palette-btn active" id="color-blue" onclick="setColorTheme('blue')">
+          <span class="color-swatch" style="background: linear-gradient(135deg, #38BDF8 0%, #0284C7 100%);"></span>
+          <span>🩵 Biru Muda (Utama)</span>
+        </button>
+
+        <button class="palette-btn" id="color-terracotta" onclick="setColorTheme('terracotta')">
+          <span class="color-swatch" style="background: linear-gradient(135deg, #E07A5F 0%, #D4A373 100%);"></span>
+          <span>🤎 Terracotta Cream</span>
+        </button>
+
+        <button class="palette-btn" id="color-pink" onclick="setColorTheme('pink')">
+          <span class="color-swatch" style="background: linear-gradient(135deg, #F06595 0%, #C2255C 100%);"></span>
+          <span>🌸 Blush Pink</span>
+        </button>
+
+        <button class="palette-btn" id="color-sage" onclick="setColorTheme('sage')">
+          <span class="color-swatch" style="background: linear-gradient(135deg, #52B788 0%, #2D6A4F 100%);"></span>
+          <span>🌿 Sage Green</span>
+        </button>
+
+        <button class="palette-btn" id="color-lavender" onclick="setColorTheme('lavender')">
+          <span class="color-swatch" style="background: linear-gradient(135deg, #A78BFA 0%, #7C3AED 100%);"></span>
+          <span>💜 Lavender Dream</span>
+        </button>
+
+        <button class="palette-btn" id="color-mono" onclick="setColorTheme('mono')">
+          <span class="color-swatch" style="background: linear-gradient(135deg, #475569 0%, #0F172A 100%);"></span>
+          <span>🖤 Minimalist Dark</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- 2. Design Model Selector -->
+    <div class="design-section">
+      <div class="design-header-row">
+        <span class="section-label">🏷️ 2. Pilih Model Desain Gantungan:</span>
+        
+        <div class="print-mode-toggle">
+          <button class="mode-btn active" id="mode-6cards" onclick="setPrintMode('6cards')">
+            📄 1 Lembar A4 (3 Depan + 3 Belakang Terpisah)
+          </button>
+          <button class="mode-btn" id="mode-1pair" onclick="setPrintMode('1pair')">
+            🏷️ 1 Pasang (1 Depan + 1 Belakang)
+          </button>
+          <button class="mode-btn" id="mode-all" onclick="setPrintMode('all')">
+            📑 Semua 7 Desain
+          </button>
+        </div>
+      </div>
+
+      <div class="design-tabs">
+        <!-- FEATURED KTP CARD -->
+        <button class="design-tab-btn featured-ktp active" id="tab-ktp" onclick="selectDesign('ktp')">
+          <span class="featured-badge">NEW KTP</span>
+          <span class="tab-icon">🪪</span>
+          <span class="tab-name">KTP Pacar Cantik</span>
+        </button>
+
+        <button class="design-tab-btn" id="tab-1" onclick="selectDesign(1)">
+          <span class="tab-icon">🏷️</span>
+          <span class="tab-name">Classic Luggage</span>
+        </button>
+
+        <button class="design-tab-btn" id="tab-2" onclick="selectDesign(2)">
+          <span class="tab-icon">📸</span>
+          <span class="tab-name">Polaroid Tape</span>
+        </button>
+
+        <button class="design-tab-btn" id="tab-3" onclick="selectDesign(3)">
+          <span class="tab-icon">🏛️</span>
+          <span class="tab-name">Elegant Arch</span>
+        </button>
+
+        <button class="design-tab-btn" id="tab-4" onclick="selectDesign(4)">
+          <span class="tab-icon">🌸</span>
+          <span class="tab-name">Romantic Pastel</span>
+        </button>
+
+        <button class="design-tab-btn" id="tab-5" onclick="selectDesign(5)">
+          <span class="tab-icon">🎂</span>
+          <span class="tab-name">Birthday Bento</span>
+        </button>
+
+        <button class="design-tab-btn" id="tab-6" onclick="selectDesign(6)">
+          <span class="tab-icon">💌</span>
+          <span class="tab-name">Secret Wax Seal</span>
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Printable Sheet -->
+  <div class="print-sheet">
+    <div class="sheet-title">
+      <h2 id="sheet-heading">Preview Kartu KTP Terpisah (5.4 × 8.56 cm) 💌</h2>
+      <p>Setiap sisi kartu terpisah dengan jarak potong yang lega untuk gunting rapi</p>
+    </div>
+
+    <!-- Tags Display Container (Rendered dynamically via JS) -->
+    <div class="tags-display-grid" id="tags-container">
+      <!-- Injected via JavaScript -->
+    </div>
+  </div>
+
+  <!-- Template Definitions (Hidden Data Store: Front & Back for each theme) -->
+  <div id="tag-templates" style="display: none;">
+
+    <!-- ================= 0. THEME: KTP IDENTITAS CINTA ================= -->
+    <div data-design="ktp-front" class="tag-ktp-base tag-ktp-front">
+      <div class="ktp-header-box">
+        <div class="ktp-nation-title">REPUBLIK CINTA RAZAAN & NADA</div>
+        <div class="ktp-card-title">KARTU TANDA SAYANG (KTS)</div>
+      </div>
+
+      <div class="ktp-nik">NIK : 21082021-NADA-03</div>
+
+      <div class="ktp-body-grid">
+        <div class="ktp-data-col">
+          <div class="ktp-data-row">
+            <span class="ktp-label">Nama</span>
+            <span class="ktp-val">Nada Nazmi Nurlaila</span>
+          </div>
+          <div class="ktp-data-row">
+            <span class="ktp-label">Status</span>
+            <span class="ktp-val highlight-val">Pacar Paling Cantik & Kesayangan</span>
+          </div>
+          <div class="ktp-data-row">
+            <span class="ktp-label">TTL</span>
+            <span class="ktp-val">Spesial & Paling Berharga ✨</span>
+          </div>
+          <div class="ktp-data-row">
+            <span class="ktp-label">Gol. Cinta</span>
+            <span class="ktp-val">100% Unlimited (A+)</span>
+          </div>
+          <div class="ktp-data-row">
+            <span class="ktp-label">Berlaku</span>
+            <span class="ktp-val highlight-val">SEUMUR HIDUP</span>
+          </div>
+        </div>
+
+        <div class="ktp-photo-col">
+          <div class="ktp-photo-frame">
+            <img src="/nada-photo.jpg" alt="Foto Nada" class="ktp-photo-img" onerror="this.src='/favicon.svg'">
+          </div>
+          <span class="ktp-stamp-badge">VERIFIED ❤️</span>
+        </div>
+      </div>
+
+      <div class="ktp-footer-sign">
+        <span style="font-size: 0.44rem; color: var(--theme-text-muted);">Tgl: 21-08-2021</span>
+        <div class="ktp-sign-box">
+          <div class="ktp-sign-name">Razaan K.P.</div>
+          <div style="font-size: 0.42rem; color: var(--theme-text-muted);">Tertanda Pacar Tercinta</div>
+        </div>
+      </div>
+    </div>
+
+    <div data-design="ktp-back" class="tag-ktp-base tag-ktp-back">
+      <div class="ktp-back-chip-bar">
+        <div class="sim-chip-icon"></div>
+        <div style="font-size: 0.46rem; font-weight: 800; color: var(--theme-primary); text-transform: uppercase;">
+          OFFICIAL PASSPORT OF LOVE 💌
+        </div>
+      </div>
+
+      <div class="hole-punch-guide"></div>
+
+      <div class="qr-ktp-box">
+        <img src="/qrcode-blue.png" alt="QR Code" class="qr-ktp-img">
+      </div>
+
+      <div class="ktp-scan-badge">Scan Kamera ke Sini 📱✨</div>
+
+      <div class="ktp-back-terms">
+        <p>1. Kartu ini sah seumur hidup sebagai pacar resmi Razaan.</p>
+        <p>2. Scan QR di atas untuk membuka web kenangan & surat spesial.</p>
+      </div>
+    </div>
+
+
+    <!-- ================= 1. THEME: CLASSIC LUGGAGE ================= -->
+    <div data-design="1-front" class="tag-ktp-base tag-classic">
+      <div>
+        <div class="hole-punch-guide"></div>
+        <h3 class="tag-header">Happy Birthday, Nada! 🎂</h3>
+        <p class="tag-sub">a special surprise for the prettiest girl ✨</p>
+      </div>
+
+      <div style="margin: 4px 0; font-family: 'Caveat', cursive; font-size: 1.1rem; color: var(--theme-primary); font-weight: 700;">
+        "our little journey & endless love" 💖
+      </div>
+
+      <div>
+        <p class="tag-author">— From: Razaan ❤️ To: Nada 🎁</p>
+      </div>
+    </div>
+
+    <div data-design="1-back" class="tag-ktp-base tag-classic">
+      <div>
+        <div class="hole-punch-guide"></div>
+        <p class="tag-sub">buka kado online kita di sini:</p>
+      </div>
+
+      <div class="qr-ktp-box">
+        <img src="/qrcode-blue.png" alt="QR Code" class="qr-ktp-img">
+      </div>
+
+      <div>
+        <p class="tag-scan-text">Arahkan Kamera HP ke Sini 📱</p>
+        <span class="tag-author">— Selamanya Milikmu 🤍</span>
+      </div>
+    </div>
+
+
+    <!-- ================= 2. THEME: POLAROID SCRAPBOOK ================= -->
+    <div data-design="2-front" class="tag-ktp-base tag-polaroid">
+      <div class="washi-tape-accent"></div>
+      
+      <div>
+        <div class="hole-punch-guide" style="margin-top: 3px;"></div>
+        <span class="polaroid-badge">Special Gift 💌</span>
+        <h3 class="polaroid-title">Selamat Ulang Tahun, Cantikkk! 💕</h3>
+      </div>
+
+      <div style="width: 22mm; height: 22mm; border: 1px dashed var(--theme-primary); border-radius: 4px; overflow: hidden; display: flex; align-items: center; justify-content: center; background: var(--theme-card-bg);">
+        <img src="/nada-photo.jpg" alt="Foto" style="width:100%; height:100%; object-fit:cover;" onerror="this.src='/favicon.svg'">
+      </div>
+
+      <div>
+        <p class="polaroid-quote">"selalu jadi alasan aku tersenyum 🥰"</p>
+      </div>
+    </div>
+
+    <div data-design="2-back" class="tag-ktp-base tag-polaroid">
+      <div class="washi-tape-accent"></div>
+      
+      <div>
+        <div class="hole-punch-guide" style="margin-top: 3px;"></div>
+        <span class="polaroid-badge">Buka Surat Rahasia ✉️</span>
+      </div>
+
+      <div class="qr-ktp-box">
+        <img src="/qrcode-blue.png" alt="QR Code" class="qr-ktp-img">
+      </div>
+
+      <div>
+        <p class="polaroid-quote">"Scan yaa sayangg! 📱✨"</p>
+      </div>
+    </div>
+
+
+    <!-- ================= 3. THEME: ELEGANT ARCH ================= -->
+    <div data-design="3-front" class="tag-ktp-base tag-arch">
+      <div>
+        <div class="hole-punch-guide"></div>
+        <h3 class="arch-title">A Special Surprise</h3>
+        <p class="arch-sub">For Nada Nazmi Nurlaila</p>
+      </div>
+
+      <div style="font-family: 'Caveat', cursive; font-size: 1.1rem; color: var(--theme-text-main); font-weight: 700; margin: 4px 0;">
+        "Wishing you all the happiness in the world ✨"
+      </div>
+
+      <div>
+        <p class="arch-sub">FROM RAZAAN WITH LOVE ❤️</p>
+      </div>
+    </div>
+
+    <div data-design="3-back" class="tag-ktp-base tag-arch">
+      <div>
+        <div class="hole-punch-guide"></div>
+        <p class="arch-sub">SCAN TO UNLOCK 📱</p>
+      </div>
+
+      <div class="qr-ktp-box">
+        <img src="/qrcode-blue.png" alt="QR Code" class="qr-ktp-img">
+      </div>
+
+      <div>
+        <p class="arch-footer">Our Story & Letters ✨</p>
+      </div>
+    </div>
+
+
+    <!-- ================= 4. THEME: ROMANTIC PASTEL ================= -->
+    <div data-design="4-front" class="tag-ktp-base tag-romantic">
+      <div>
+        <div class="hole-punch-guide"></div>
+        <div class="romantic-icon">🎁✨</div>
+        <h3 class="romantic-title">Happy Birthday Sayang!</h3>
+        <p class="romantic-for">From your favorite person ❤️</p>
+      </div>
+
+      <div style="font-family: 'Caveat', cursive; font-size: 1.05rem; color: var(--theme-primary); font-weight: 700;">
+        "aku sayang kamu banyak-banyakkk! 🤍"
+      </div>
+
+      <div>
+        <p style="font-size: 0.58rem; color: var(--theme-text-muted);">Est. 21 Agustus 2021</p>
+      </div>
+    </div>
+
+    <div data-design="4-back" class="tag-ktp-base tag-romantic">
+      <div>
+        <div class="hole-punch-guide"></div>
+        <p class="romantic-for">Arahkan kamera HP ke sini 📱</p>
+      </div>
+
+      <div class="qr-ktp-box">
+        <img src="/qrcode-blue.png" alt="QR Code" class="qr-ktp-img">
+      </div>
+
+      <div>
+        <p class="romantic-prompt">Scan with your camera 💖</p>
+      </div>
+    </div>
+
+
+    <!-- ================= 5. THEME: BENTO BIRTHDAY CAKE ================= -->
+    <div data-design="5-front" class="tag-ktp-base tag-bento">
+      <div>
+        <div class="hole-punch-guide"></div>
+        <span class="bento-badge">🎂 MAKE A WISH!</span>
+        <h3 class="bento-title">Ada yang Ultah Nih! 🎉</h3>
+      </div>
+
+      <div style="font-size: 1.5rem; line-height: 1; margin: 4px 0;">🎂✨💌</div>
+
+      <div>
+        <p class="bento-scan" style="font-size: 0.88rem;">Semoga panjang umur & bahagia selalu yaa cantikk! ❤️</p>
+      </div>
+    </div>
+
+    <div data-design="5-back" class="tag-ktp-base tag-bento">
+      <div>
+        <div class="hole-punch-guide"></div>
+        <span class="bento-badge">KADO DIGITAL 📱</span>
+      </div>
+
+      <div class="qr-ktp-box">
+        <img src="/qrcode-blue.png" alt="QR Code" class="qr-ktp-img">
+      </div>
+
+      <div>
+        <p class="bento-scan">Scan kamera ke sini yaa cantiikk 💖</p>
+      </div>
+    </div>
+
+
+    <!-- ================= 6. THEME: SECRET WAX SEAL ================= -->
+    <div data-design="6-front" class="tag-ktp-base tag-waxseal">
+      <div>
+        <div class="hole-punch-guide"></div>
+        <div style="display:flex; justify-content:center;"><div class="faux-seal">💌</div></div>
+        <h3 class="wax-title">Pintu Rahasia Kita</h3>
+        <p class="wax-sub">Khusus untuk Nada tercinta 🌹</p>
+      </div>
+
+      <div style="font-family: 'Caveat', cursive; font-size: 1.05rem; color: var(--theme-primary); font-weight: 700; margin: 3px 0;">
+        "buka kenangan manis kita 🗝️"
+      </div>
+
+      <div>
+        <p class="wax-sub">— Dari supir pribadi & kesayanganmu</p>
+      </div>
+    </div>
+
+    <div data-design="6-back" class="tag-ktp-base tag-waxseal">
+      <div>
+        <div class="hole-punch-guide"></div>
+        <p class="wax-sub">KODE RAHASIA 🗝️</p>
+      </div>
+
+      <div class="qr-ktp-box">
+        <img src="/qrcode-blue.png" alt="QR Code" class="qr-ktp-img">
+      </div>
+
+      <div>
+        <p class="wax-footer">Buka Kado Digitalnya 🗝️</p>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    let currentSelectedDesign = 'ktp'; // 'ktp', 1, 2, 3, 4, 5, 6
+    let currentPrintMode = '6cards'; // '6cards' (3 Depan + 3 Belakang), '1pair', 'all'
+    let currentTheme = 'blue';
+
+    const qrFiles = {
+      blue: { png: '/qrcode-blue.png', svg: '/qrcode-blue.svg', name: 'biru' },
+      terracotta: { png: '/qrcode-aesthetic.png', svg: '/qrcode-aesthetic.svg', name: 'terracotta' },
+      pink: { png: '/qrcode-aesthetic.png', svg: '/qrcode-aesthetic.svg', name: 'pink' },
+      sage: { png: '/qrcode-sage.png', svg: '/qrcode-sage.svg', name: 'sage' },
+      lavender: { png: '/qrcode-purple.png', svg: '/qrcode-purple.svg', name: 'lavender' },
+      mono: { png: '/qrcode.png', svg: '/qrcode.svg', name: 'monokrom' }
+    };
+
+    const designNames = {
+      ktp: 'KTP Pacar Cantik (Kartu Identitas Cinta)',
+      1: 'Classic Luggage Tag',
+      2: 'Polaroid Tape Tag',
+      3: 'Elegant Arch Tag',
+      4: 'Romantic Pastel Tag',
+      5: 'Birthday Bento Tag',
+      6: 'Secret Wax Seal Tag'
+    };
+
+    function setColorTheme(theme) {
+      currentTheme = theme;
+      document.body.className = 'theme-' + theme;
+
+      // Update active button state
+      document.querySelectorAll('.palette-btn').forEach(btn => btn.classList.remove('active'));
+      const activeBtn = document.getElementById('color-' + theme);
+      if (activeBtn) activeBtn.classList.add('active');
+
+      // Update download links
+      const qrData = qrFiles[theme] || qrFiles.blue;
+      const dlPng = document.getElementById('btn-dl-png');
+      const dlSvg = document.getElementById('btn-dl-svg');
+      if (dlPng) {
+        dlPng.href = qrData.png;
+        dlPng.download = `qrcode-${qrData.name}.png`;
+      }
+      if (dlSvg) {
+        dlSvg.href = qrData.svg;
+        dlSvg.download = `qrcode-${qrData.name}.svg`;
+      }
+
+      // Update QR images in templates
+      document.querySelectorAll('#tag-templates .qr-ktp-img').forEach(img => {
+        img.src = qrData.png;
+      });
+
+      renderTags();
+    }
+
+    function selectDesign(designId) {
+      currentSelectedDesign = designId;
+      
+      // Update Tab UI
+      document.querySelectorAll('.design-tab-btn').forEach(btn => btn.classList.remove('active'));
+      const activeTab = document.getElementById('tab-' + designId);
+      if (activeTab) activeTab.classList.add('active');
+
+      renderTags();
+    }
+
+    function setPrintMode(mode) {
+      currentPrintMode = mode;
+
+      // Update Mode Buttons
+      document.querySelectorAll('.mode-btn').forEach(btn => btn.classList.remove('active'));
+      const activeModeBtn = document.getElementById('mode-' + mode);
+      if (activeModeBtn) activeModeBtn.classList.add('active');
+
+      renderTags();
+    }
+
+    function getCardElement(designKey, side) {
+      const templates = document.getElementById('tag-templates');
+      const tpl = templates.querySelector(`[data-design="${designKey}-${side}"]`);
+      const qrData = qrFiles[currentTheme] || qrFiles.blue;
+
+      if (!tpl) return null;
+
+      const clone = tpl.cloneNode(true);
+      const qrImg = clone.querySelector('.qr-ktp-img');
+      if (qrImg) qrImg.src = qrData.png;
+
+      return clone;
+    }
+
+    function renderTags() {
+      const container = document.getElementById('tags-container');
+      const heading = document.getElementById('sheet-heading');
+      container.innerHTML = '';
+
+      if (currentPrintMode === 'all') {
+        heading.innerText = 'Koleksi Semua 7 Desain (14 Kartu Terpisah)';
+        const allKeys = ['ktp', 1, 2, 3, 4, 5, 6];
+        allKeys.forEach(key => {
+          const front = getCardElement(key, 'front');
+          const back = getCardElement(key, 'back');
+          if (front) container.appendChild(front);
+          if (back) container.appendChild(back);
+        });
+      } else if (currentPrintMode === '1pair') {
+        heading.innerText = `Desain Terpilih: ${designNames[currentSelectedDesign]} (1 Pasang Terpisah)`;
+        const front = getCardElement(currentSelectedDesign, 'front');
+        const back = getCardElement(currentSelectedDesign, 'back');
+        if (front) container.appendChild(front);
+        if (back) container.appendChild(back);
+      } else {
+        // 6cards Mode: 3 Fronts + 3 Backs separated cleanly on 1 A4 sheet
+        heading.innerText = `Desain Terpilih: ${designNames[currentSelectedDesign]} (3 Depan + 3 Belakang Terpisah)`;
+        for (let i = 0; i < 3; i++) {
+          const front = getCardElement(currentSelectedDesign, 'front');
+          const back = getCardElement(currentSelectedDesign, 'back');
+          if (front) container.appendChild(front);
+          if (back) container.appendChild(back);
+        }
+      }
+    }
+
+    // Initial Render on Page Load
+    setColorTheme('blue');
+  </script>
+
+</body>
+</html>

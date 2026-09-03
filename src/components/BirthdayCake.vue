@@ -137,14 +137,14 @@
             <span class="wish-heart">🤍</span>
             <h3 class="wish-heading">Doa Terbaik untuk Nada:</h3>
             <p class="wish-text">
-              "Semoga di usia yang baru ini, setiap langkahmu dipenuhi keberkahan, 
-              diberikan kesehatan, kebahagiaan yang melimpah, dan semua impian besarmu tercapai satu per satu. 
+              "Semoga di usia yang baru ini, setiap langkah kamu dipenuhi keberkahan, 
+              diberikan kesehatan, kebahagiaan yang melimpah, dan semua impian besar kamu tercapai satu per satu. 
               Aamiin ya rabbal 'aalamiin ✨"
             </p>
             <span class="wish-signature">— dari yang selalu mendoakanmu di setiap sujud</span>
             
             <button class="btn-relight" @click="relightCandle">
-              <span>Nyalakan Lilin Lagi 🔥</span>
+              <span>Nyalain Lilin Lagi 🔥</span>
             </button>
           </div>
         </div>

@@ -33,7 +33,7 @@
           <div class="letter-body">
             <p>
               makasii banyak yaa sudah selalu jadi alasan aku tersenyum setiap hari. 
-              dari awal kita ketemu sampe detik ini, rasa sayang aku ke kamu ga pernah berkurang, 
+              dari awal kita ketemu sampe detik ini, rasa sayang aku ke kamu tida pernah berkurang, 
               malah makin nambah setiap harinya.
             </p>
             <p class="letter-highlight">

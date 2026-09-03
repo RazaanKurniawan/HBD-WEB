@@ -8,7 +8,7 @@
       </div>
       <h2 class="quiz-main-title">seberapa kenal kamu sama cerita kita?</h2>
       <p class="quiz-main-subtitle">
-        ayo buktikan seberapa tajam ingatanmu tentang momen-momen manis kita, Nada! 😜✨
+        ayo buktiin seberapa tajam ingetan kamu tentang momen-momen kita.
       </p>
     </div>
 
@@ -22,9 +22,9 @@
           <div class="start-icon-wrap">
             <span class="animated-heart-icon">💖</span>
           </div>
-          <h3 class="start-title">Ujian Kelulusan Pacar Tersayang 📜</h3>
+          <h3 class="start-title">Ujian Kelulusan📜</h3>
           <p class="start-desc">
-            Ada <strong>6 Pertanyaan tentang perjalanan kita berdua</strong>. Harus bener semua yah, kalo ada yang salah brrti kamu tida sayang aku! 😜❤️
+            Ada <strong>6 Pertanyaan tentang perjalanan kita berdua</strong>. Harus bener semua yah, kalo ada yang salah brrti kamu tida sayang aku!😏
           </p>
 
           <div class="rules-chips">
@@ -34,7 +34,7 @@
           </div>
 
           <button class="btn-quiz-primary" @click="startQuiz">
-            <span>Mulai Kuis Cinta</span>
+            <span>Mulai Kuis</span>
             <span class="btn-arrow">🚀</span>
           </button>
         </div>
@@ -90,7 +90,7 @@
               <div class="feedback-icon">{{ isCorrect ? '🎉' : '😜' }}</div>
               <div class="feedback-body">
                 <p class="feedback-verdict">
-                  {{ isCorrect ? 'Tepat Banget Sayangku! 💖' : 'Yahh Salah! Kamu Gak Sayang Aku Ya? 🙈' }}
+                  {{ isCorrect ? 'Benaarrr! 💖' : 'Yahh Salah! Kamu Gak Sayang Aku Ya? 🙈' }}
                 </p>
                 <p class="feedback-desc">{{ currentQuestion.explanation }}</p>
               </div>
@@ -230,7 +230,7 @@ const questions = ref([
       '21 September 2021'
     ],
     correctIndex: 1,
-    explanation: '21 Agustus 2021! Hari paling spesial di mana kita resmi jadian dan duniaku jadi penuh warna bareng kamu ✨💖'
+    explanation: '21 Agustus 2021! Hari paling spesial di mana kita resmi jadian setelah aku ditolak 2 KALI!'
   },
   {
     id: 2,
@@ -243,11 +243,11 @@ const questions = ref([
       'Komang - Raim Laode'
     ],
     correctIndex: 0,
-    explanation: "'Beautiful' by Bazzi! Karena lagu ini persis ngegambarin kamu yang selalu cantik setiap hari di mataku! 🎶"
+    explanation: "'Beautiful' by Bazzi! Karena lagu ini persis ngegambarin kamu yang selalu cantik setiap hari di mata aku! 🎶"
   },
   {
     id: 3,
-    tag: '💻 Kebiasaan Cowokmu',
+    tag: '💻 Kebiasaan Akuu',
     question: 'Kalo aku lagi sibuk main laptop berjam-jam, biasanya aku ngapain?',
     options: [
       'Gawe/Main Game',
@@ -256,7 +256,7 @@ const questions = ref([
       'Tidur siang pura-pura sibuk'
     ],
     correctIndex: 0,
-    explanation: 'Hehe gawe atau main game, tapi tenang aja pikiran & hatiku tetep nyangkut di kamu terus kok! 💻🎮❤️'
+    explanation: 'Hehe gawe atau main game, tapi tenang aja di hati dan pikiran aku selalu ada kamu kok xixixi'
   },
   {
     id: 4,
@@ -282,12 +282,12 @@ const questions = ref([
       'Oja Shabu & Grill'
     ],
     correctIndex: 0,
-    explanation: 'Mie Ayam Metland yang legendaris walau sekarang udah tutup, tapi kenangan first date kita tetep abadi di hati! 🍜✨'
+    explanation: 'Mie Ayam Metland yang uda tutup anyingg, tapi kenangan first date kita tetep abadi di hati!'
   },
   {
     id: 6,
     tag: '💖 Pertanyaan Paling Penting',
-    question: 'Siapa orang di dunia ini yang paling sayang, paling cinta, dan paling bersyukur punya Nada?',
+    question: 'Siapa orang di dunia ini yang paling sayang, paling cinta, dan paling bersyukur punya kamu?',
     options: [
       'Razaan Kurniawan Putra dong! 💖',
       'Razaan (versi ganteng)',
@@ -295,7 +295,7 @@ const questions = ref([
       'SEMUA BENAR (Jelas Razaan!)'
     ],
     correctIndex: -1, // All options are correct
-    explanation: 'Jelas Razaan dong! Gak ada yang bisa ngalahin rasa sayang dan cinta Razaan buat Nada! ❤️'
+    explanation: 'Jelas aku dong! tida ada yang bisa ngalahin rasa sayang dan cinta aku buat kamu! ❤️'
   }
 ])
 

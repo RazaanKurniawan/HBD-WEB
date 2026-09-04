@@ -16,7 +16,7 @@
               type="text" 
               inputmode="numeric"
               maxlength="8"
-              placeholder="e.g. 21082021"
+              placeholder="e.g. 21082022"
               class="lock-input"
               :class="{ 'input-error': isWrongPassword }"
               autofocus
@@ -118,7 +118,7 @@
       <div class="heartbeat-content">
         <span class="beating-heart-icon">🫀</span>
         <p class="heartbeat-text">
-          Sejak <span class="highlight-date">21 Agustus 2021</span>, jantungku sudah berdetak sekitar
+          Sejak <span class="highlight-date">21 Agustus 2022</span>, jantungku sudah berdetak sekitar
           <strong class="heartbeat-number">{{ formattedHeartbeats }}</strong> kali, dan semuanya untuk kamu.
         </p>
         <span class="pulse-indicator">
@@ -265,15 +265,14 @@ const isUnlocked = ref(false)
 const inputDate = ref('')
 const isWrongPassword = ref(false)
 const errorMessage = ref('')
-const correctPassword = '21082021' // DDMMYYYY (21 Agustus 2021)
+const correctPassword = '21082022' // DDMMYYYY (21 Agustus 2022)
 
 const checkPassword = () => {
   const cleanInput = inputDate.value.trim().replace(/[^0-9]/g, '')
   
   if (
     cleanInput === correctPassword || 
-    cleanInput === '21-08-2021' || 
-    cleanInput === '21/08/2021' ||
+    cleanInput === '21082022' || 
     cleanInput === '12052024'
   ) {
     isUnlocked.value = true
@@ -303,8 +302,8 @@ const checkPassword = () => {
 }
 
 // ================= 2. Heartbeat Sync Logic =================
-// Anniversary Date: August 21, 2021
-const anniversaryDate = new Date('2021-08-21T00:00:00')
+// Anniversary Date: August 21, 2022
+const anniversaryDate = new Date('2022-08-21T00:00:00')
 const heartbeatsCounter = ref(0)
 let heartbeatInterval = null
 

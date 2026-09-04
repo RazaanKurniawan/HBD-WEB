@@ -224,13 +224,13 @@ const questions = ref([
     tag: '📅 Momen Bersejarah',
     question: 'Kapan tanggal jadian kita?',
     options: [
-      '21 Juli 2021',
-      '21 Agustus 2021',
-      '17 Agustus 2021',
-      '21 September 2021'
+      '21 Juli 2022',
+      '21 Agustus 2022',
+      '17 Agustus 2022',
+      '21 September 2022'
     ],
     correctIndex: 1,
-    explanation: '21 Agustus 2021! Hari paling spesial di mana kita resmi jadian setelah aku ditolak 2 KALI!'
+    explanation: '21 Agustus 2022! Hari paling spesial di mana kita resmi jadian setelah aku ditolak 2 KALI!'
   },
   {
     id: 2,

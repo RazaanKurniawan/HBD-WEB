@@ -217,11 +217,16 @@
       <FunnyReveal />
     </section>
 
+    <!-- Interactive 3D Gift Unboxing Section -->
+    <section class="gift-unboxing-section">
+      <GiftUnboxing />
+    </section>
+
     <!-- 3. Grand Finale: Interactive Love Letter Envelope Section -->
     <section class="love-letter-section">
       <div class="footer-container">
         <div class="surprise-badge">
-          <span>🎁</span>
+          <span>💌</span>
           <span>kejutan terakhir buat kamu</span>
         </div>
         <h2 class="surprise-heading">ada surat kecil buat nada...</h2>
@@ -250,6 +255,7 @@ import FunnyReveal from './components/FunnyReveal.vue'
 import BirthdayCake from './components/BirthdayCake.vue'
 import CoupleQuiz from './components/CoupleQuiz.vue'
 import MemoryMap from './components/MemoryMap.vue'
+import GiftUnboxing from './components/GiftUnboxing.vue'
 
 // Audio import
 import bgmFile from './assets/audio/Bazzi - Beautiful feat. Camila [Official Audio].mp3'

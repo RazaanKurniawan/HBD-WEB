@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gift Tag Paper Bag QR Code (Ukuran KTP Terpisah) - Happy Birthday Nada! 🎂💖</title>
+  <title>Gift Tag Paper Bag QR Code (Bentuk Love & KTP) - Happy Birthday Nada! 🎂💖</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Courier+Prime:wght@700&display=swap" rel="stylesheet">
@@ -23,10 +23,14 @@
       --theme-seal-1: #38BDF8;
       --theme-seal-2: #0284C7;
       
-      /* Exact Standard KTP / ATM Card Dimension: 85.6mm x 53.98mm */
+      /* Exact Standard Dimensions */
       --ktp-w: 54mm;
       --ktp-h: 85.6mm;
       --ktp-radius: 4mm;
+      
+      /* Heart Tag Dimension */
+      --heart-w: 80mm;
+      --heart-h: 74mm;
     }
 
     /* THEME COLOR PRESETS */
@@ -361,8 +365,8 @@
 
     .design-tabs {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-      gap: 10px;
+      grid-template-columns: repeat(auto-fit, minmax(115px, 1fr));
+      gap: 8px;
     }
 
     .design-tab-btn {
@@ -389,7 +393,7 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     }
 
-    .design-tab-btn.featured-ktp {
+    .design-tab-btn.featured-tab {
       position: relative;
       border: 2px solid var(--theme-secondary);
     }
@@ -399,18 +403,18 @@
       top: -7px;
       background: var(--theme-primary);
       color: #FFFFFF;
-      font-size: 0.6rem;
+      font-size: 0.58rem;
       font-weight: 800;
-      padding: 1px 7px;
+      padding: 1px 6px;
       border-radius: 999px;
     }
 
     .tab-icon {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
     }
 
     .tab-name {
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       font-weight: 700;
       color: var(--theme-text-main);
     }
@@ -481,10 +485,11 @@
     /* Container for Displayed Separated Cards */
     .tags-display-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(54mm, 54mm));
+      grid-template-columns: repeat(auto-fit, minmax(60mm, 1fr));
       gap: 20px 24px;
       justify-content: center;
-      align-items: start;
+      align-items: center;
+      justify-items: center;
       width: 100%;
     }
 
@@ -554,7 +559,123 @@
       display: block;
     }
 
-    /* ================= 1. THEME: KTP IDENTITAS CINTA (AUTHENTIC ID CARD) ================= */
+    /* ================= 0. THEME: HEART LOVE TAG (BENTUK HATI) ================= */
+    .tag-heart-base {
+      width: var(--heart-w);
+      height: var(--heart-h);
+      min-width: var(--heart-w);
+      min-height: var(--heart-h);
+      max-width: var(--heart-w);
+      max-height: var(--heart-h);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin: 0 auto;
+      user-select: none;
+    }
+
+    .heart-svg-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+      filter: drop-shadow(0 4px 10px rgba(0,0,0,0.06));
+      pointer-events: none;
+    }
+
+    .heart-content-wrap {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 8.5mm 8mm 12.5mm 8mm;
+      gap: 1.5mm;
+    }
+
+    .heart-hole-guide {
+      position: absolute;
+      top: 9.5mm;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 4.5mm;
+      height: 4.5mm;
+      border-radius: 50%;
+      border: 1.2px dashed var(--theme-hole);
+      background: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 3;
+    }
+
+    .heart-hole-guide::after {
+      content: '';
+      width: 1.5px;
+      height: 1.5px;
+      background: var(--theme-hole);
+      border-radius: 50%;
+    }
+
+    .heart-title {
+      font-family: 'Caveat', cursive;
+      font-size: 1.12rem;
+      font-weight: 700;
+      color: var(--theme-primary);
+      line-height: 1.05;
+      white-space: nowrap;
+    }
+
+    .heart-sub {
+      font-size: 0.54rem;
+      color: var(--theme-text-muted);
+      margin-top: 0;
+      white-space: nowrap;
+    }
+
+    .heart-quote {
+      font-family: 'Caveat', cursive;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--theme-text-main);
+      line-height: 1;
+      white-space: nowrap;
+      margin: 0;
+    }
+
+    .heart-author {
+      font-size: 0.58rem;
+      color: var(--theme-primary);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .qr-heart-box {
+      background: #FFFFFF;
+      padding: 2px;
+      border-radius: 5px;
+      border: 1px solid var(--theme-card-border);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+    }
+
+    .qr-heart-img {
+      width: 18mm;
+      height: 18mm;
+      display: block;
+    }
+
+    /* ================= 1. THEME: KTP IDENTITAS CINTA ================= */
     .tag-ktp-front {
       padding: 6px 7px 5px 7px;
       justify-content: flex-start;
@@ -973,7 +1094,7 @@
       line-height: 1;
     }
 
-    /* ================= PRINT MEDIA QUERY: EXACT A4 KTP SIZING (SEPARATED CARDS) ================= */
+    /* ================= PRINT MEDIA QUERY: EXACT A4 SIZING (NO OVERFLOW) ================= */
     @page {
       size: A4 portrait;
       margin: 10mm 15mm;
@@ -1004,8 +1125,8 @@
 
       .tags-display-grid {
         display: grid !important;
-        grid-template-columns: repeat(2, 54mm) !important;
-        grid-gap: 8mm 24mm !important;
+        grid-template-columns: repeat(2, minmax(54mm, 72mm)) !important;
+        grid-gap: 8mm 16mm !important;
         justify-content: center !important;
         align-content: start !important;
         width: 100% !important;
@@ -1013,7 +1134,7 @@
         padding-top: 2mm !important;
       }
 
-      .tag-ktp-base {
+      .tag-ktp-base, .tag-heart-base {
         box-shadow: none !important;
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
@@ -1027,12 +1148,12 @@
   <!-- Top Action Header -->
   <div class="action-header">
     <div class="header-info">
-      <h1>🏷️ Paperbag Gift Tag QR Code (Kartu KTP Terpisah)</h1>
-      <p>Setiap kartu terpisah rapi dengan 4 sudut rounded untuk kemudahan gunting dan tempel ✨</p>
+      <h1>🏷️ Paperbag Gift Tag QR Code (Bentuk Love & KTP)</h1>
+      <p>Pilihan gantungan bentuk Love (Hati) & KTP dua sisi (Depan & Belakang) terpisah rapi ✨</p>
       <div class="badge-row">
         <span class="badge-chip badge-ktp">
-          <span>📏</span>
-          <span>Ukuran KTP: 54 × 85.6 mm</span>
+          <span>💖</span>
+          <span>Desain Bentuk Love & KTP</span>
         </span>
         <span class="badge-chip badge-perm">
           <span>🔒</span>
@@ -1057,7 +1178,7 @@
   <div class="print-tip-banner">
     <div class="tip-icon">🖨️</div>
     <div class="tip-content">
-      <strong>PENTING SAAT CETAK:</strong> Pada menu print browser (Chrome/Edge), pastikan centang opsi <strong>"Background graphics" (Grafik latar belakang)</strong> agar warna biru muda dan background tercetak sempurna!
+      <strong>PENTING SAAT CETAK:</strong> Pada dialog print browser, pastikan centang opsi <strong>"Background graphics" (Grafik latar belakang)</strong> agar warna biru muda dan background tercetak sempurna!
     </div>
   </div>
 
@@ -1113,15 +1234,22 @@
             🏷️ 1 Pasang (1 Depan + 1 Belakang)
           </button>
           <button class="mode-btn" id="mode-all" onclick="setPrintMode('all')">
-            📑 Semua 7 Desain
+            📑 Semua Desain
           </button>
         </div>
       </div>
 
       <div class="design-tabs">
+        <!-- FEATURED HEART TAG -->
+        <button class="design-tab-btn featured-tab active" id="tab-heart" onclick="selectDesign('heart')">
+          <span class="featured-badge">NEW LOVE</span>
+          <span class="tab-icon">💖</span>
+          <span class="tab-name">Heart Love Tag</span>
+        </button>
+
         <!-- FEATURED KTP CARD -->
-        <button class="design-tab-btn featured-ktp active" id="tab-ktp" onclick="selectDesign('ktp')">
-          <span class="featured-badge">NEW KTP</span>
+        <button class="design-tab-btn featured-tab" id="tab-ktp" onclick="selectDesign('ktp')">
+          <span class="featured-badge">KTP CARD</span>
           <span class="tab-icon">🪪</span>
           <span class="tab-name">KTP Pacar Cantik</span>
         </button>
@@ -1163,8 +1291,8 @@
   <!-- Printable Sheet -->
   <div class="print-sheet">
     <div class="sheet-title">
-      <h2 id="sheet-heading">Preview Kartu KTP Terpisah (5.4 × 8.56 cm) 💌</h2>
-      <p>Setiap sisi kartu terpisah dengan jarak potong yang lega untuk gunting rapi</p>
+      <h2 id="sheet-heading">Preview Kartu Terpisah (Sisi Depan & Belakang) 💌</h2>
+      <p>Setiap kartu terpisah rapi dengan jarak potong yang lega untuk gunting</p>
     </div>
 
     <!-- Tags Display Container (Rendered dynamically via JS) -->
@@ -1176,7 +1304,49 @@
   <!-- Template Definitions (Hidden Data Store: Front & Back for each theme) -->
   <div id="tag-templates" style="display: none;">
 
-    <!-- ================= 0. THEME: KTP IDENTITAS CINTA ================= -->
+    <!-- ================= 0. THEME: HEART LOVE TAG (BENTUK HATI) ================= -->
+    <div data-design="heart-front" class="tag-heart-base">
+      <svg class="heart-svg-bg" viewBox="-4 -4 108 102" preserveAspectRatio="none">
+        <path d="M 50 90 C 12 65 0 48 0 25 C 0 10 12 0 28 0 C 38 0 46 5 50 11 C 54 5 62 0 72 0 C 88 0 100 10 100 25 C 100 48 88 65 50 90 Z" 
+              fill="var(--theme-card-bg)" stroke="var(--theme-primary)" stroke-width="2" stroke-dasharray="3.5,3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="heart-hole-guide"></div>
+      
+      <div class="heart-content-wrap">
+        <div>
+          <h3 class="heart-title">Happy Birthday, Sayangg!</h3>
+          <p class="heart-sub">khusus untuk nada cantiikk ✨</p>
+        </div>
+        <p class="heart-quote">"selalu jadi alasan aku tersenyum 🤍"</p>
+        <div>
+          <span class="heart-author">— From: Razaan ❤️</span>
+        </div>
+      </div>
+    </div>
+
+    <div data-design="heart-back" class="tag-heart-base">
+      <svg class="heart-svg-bg" viewBox="-4 -4 108 102" preserveAspectRatio="none">
+        <path d="M 50 90 C 12 65 0 48 0 25 C 0 10 12 0 28 0 C 38 0 46 5 50 11 C 54 5 62 0 72 0 C 88 0 100 10 100 25 C 100 48 88 65 50 90 Z" 
+              fill="var(--theme-card-bg)" stroke="var(--theme-primary)" stroke-width="2" stroke-dasharray="3.5,3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="heart-hole-guide"></div>
+      
+      <div class="heart-content-wrap">
+        <div>
+          <h3 class="heart-title" style="font-size: 1.02rem;">Buka Kado Online</h3>
+          <p class="heart-sub">surat rahasia & kenangan kita ✨</p>
+        </div>
+        <div class="qr-heart-box">
+          <img src="/qrcode-blue.png" alt="QR Code" class="qr-heart-img qr-ktp-img">
+        </div>
+        <div>
+          <p class="heart-quote" style="font-size: 0.82rem; margin: 0;">"Scan yaa sayangg!💖"</p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ================= 1. THEME: KTP IDENTITAS CINTA ================= -->
     <div data-design="ktp-front" class="tag-ktp-base tag-ktp-front">
       <div class="ktp-header-box">
         <div class="ktp-nation-title">REPUBLIK CINTA RAZAAN & NADA</div>
@@ -1249,7 +1419,7 @@
     </div>
 
 
-    <!-- ================= 1. THEME: CLASSIC LUGGAGE ================= -->
+    <!-- ================= 2. THEME: CLASSIC LUGGAGE ================= -->
     <div data-design="1-front" class="tag-ktp-base tag-classic">
       <div>
         <div class="hole-punch-guide"></div>
@@ -1283,7 +1453,7 @@
     </div>
 
 
-    <!-- ================= 2. THEME: POLAROID SCRAPBOOK ================= -->
+    <!-- ================= 3. THEME: POLAROID SCRAPBOOK ================= -->
     <div data-design="2-front" class="tag-ktp-base tag-polaroid">
       <div class="washi-tape-accent"></div>
       
@@ -1320,7 +1490,7 @@
     </div>
 
 
-    <!-- ================= 3. THEME: ELEGANT ARCH ================= -->
+    <!-- ================= 4. THEME: ELEGANT ARCH ================= -->
     <div data-design="3-front" class="tag-ktp-base tag-arch">
       <div>
         <div class="hole-punch-guide"></div>
@@ -1353,7 +1523,7 @@
     </div>
 
 
-    <!-- ================= 4. THEME: ROMANTIC PASTEL ================= -->
+    <!-- ================= 5. THEME: ROMANTIC PASTEL ================= -->
     <div data-design="4-front" class="tag-ktp-base tag-romantic">
       <div>
         <div class="hole-punch-guide"></div>
@@ -1387,7 +1557,7 @@
     </div>
 
 
-    <!-- ================= 5. THEME: BENTO BIRTHDAY CAKE ================= -->
+    <!-- ================= 6. THEME: BENTO BIRTHDAY CAKE ================= -->
     <div data-design="5-front" class="tag-ktp-base tag-bento">
       <div>
         <div class="hole-punch-guide"></div>
@@ -1418,7 +1588,7 @@
     </div>
 
 
-    <!-- ================= 6. THEME: SECRET WAX SEAL ================= -->
+    <!-- ================= 7. THEME: SECRET WAX SEAL ================= -->
     <div data-design="6-front" class="tag-ktp-base tag-waxseal">
       <div>
         <div class="hole-punch-guide"></div>
@@ -1454,7 +1624,7 @@
   </div>
 
   <script>
-    let currentSelectedDesign = 'ktp'; // 'ktp', 1, 2, 3, 4, 5, 6
+    let currentSelectedDesign = 'heart'; // 'heart', 'ktp', 1, 2, 3, 4, 5, 6
     let currentPrintMode = '6cards'; // '6cards' (3 Depan + 3 Belakang), '1pair', 'all'
     let currentTheme = 'blue';
 
@@ -1468,6 +1638,7 @@
     };
 
     const designNames = {
+      heart: 'Heart Love Tag (Bentuk Hati Cantik)',
       ktp: 'KTP Pacar Cantik (Kartu Identitas Cinta)',
       1: 'Classic Luggage Tag',
       2: 'Polaroid Tape Tag',
@@ -1549,8 +1720,8 @@
       container.innerHTML = '';
 
       if (currentPrintMode === 'all') {
-        heading.innerText = 'Koleksi Semua 7 Desain (14 Kartu Terpisah)';
-        const allKeys = ['ktp', 1, 2, 3, 4, 5, 6];
+        heading.innerText = 'Koleksi Semua Desain Gantungan (Sisi Depan & Belakang)';
+        const allKeys = ['heart', 'ktp', 1, 2, 3, 4, 5, 6];
         allKeys.forEach(key => {
           const front = getCardElement(key, 'front');
           const back = getCardElement(key, 'back');

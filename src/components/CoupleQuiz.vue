@@ -264,7 +264,7 @@ const questions = ref([
     question: 'Reaksi kamu setelah kalah main Mobile Legends sama aku biasanya apa?',
     options: [
       'Merasa Bersalah (GAJE)',
-      'Marah-marah ke Razaan',
+      'Marah-marah ke aku',
       'Banting HP ke kasur',
       'Langsung uninstall aplikasi game'
     ],
@@ -290,8 +290,8 @@ const questions = ref([
     question: 'Siapa orang di dunia ini yang paling sayang, paling cinta, dan paling bersyukur punya kamu?',
     options: [
       'Razaan Kurniawan Putra dong! 💖',
-      'Razaan (versi ganteng)',
-      'Razaan (versi pacar terbaik)',
+      'Razaan (versi paling ganteng)',
+      'Razaan (versi paling romantis)',
       'SEMUA BENAR (Jelas Razaan!)'
     ],
     correctIndex: -1, // All options are correct
@@ -325,15 +325,15 @@ const scoreGrade = computed(() => {
     return {
       icon: '🌟',
       title: 'Hampir Sempurna! Hebat Banget!',
-      message: 'Daya ingatmu tentang kita juara banget, makin cinta deh sama kamu! 💖',
+      message: 'Daya ingat kamu tentang kita mantap, makin sayang deh sama kamu! 💖',
       certBadge: 'Pacar Idaman Pengertian Kelas Emas 🥇'
     }
   } else {
     return {
       icon: '🥰',
       title: 'Tetap Lulus Karena Terlalu Cantik!',
-      message: 'Walau ada yang salah dikit, dimaafin karena kamu tetep pacar tercantikku! Denda peluk yaa! 😜',
-      certBadge: 'Juara 1 Kesayangan Razaan Selamanya 💖'
+      message: 'Walau ada yang salah dikit, dimaafin karena kamu tetep pacar tercantikku! Denda kiss yaa! 😜',
+      certBadge: 'Juara 1 Kesayangan Aku Selamanya 💖'
     }
   }
 })
